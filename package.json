@@ -1,0 +1,11 @@
+{
+  "name": "oy-forms",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0"
+  },
+  "scripts": {
+    "vercel-build": "echo \"no build step\""
+  }
+}
