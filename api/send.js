@@ -73,7 +73,11 @@ module.exports = async (req, res) => {
   const TO = process.env.MAIL_TO || "info@onlyyachtsfl.com";
   const CC = process.env.MAIL_CC || "yan.polianchev@gmail.com";
   const FROM = process.env.MAIL_FROM || "no-reply@onlyyachtsfl.com";
-  const SUBJECT = (process.env.MAIL_SUBJECT_PREFIX || "Only Yachts FL — Inquiry");
+  const SUBJECT = (
+  body._subject || body.subject ||
+  process.env.MAIL_SUBJECT_PREFIX ||
+  "Form - Co-ownership for Owners of Yachts"
+);
 
   // --- 1) SendGrid по API ---
   if (process.env.SENDGRID_API_KEY) {
